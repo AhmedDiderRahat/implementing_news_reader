@@ -1,0 +1,26 @@
+soup = BeautifulSoup(page.content, 'html.parser')
+tags = soup.find_all('a')
+
+intented_url = set()
+
+for link in tags:
+    # only took the url which is under intended url
+    topic_url = str(link.get('href'))
+    if '/entertainment/' in topic_url:
+        
+        # check the link is already added
+        
+        if topic_url not in intented_url:
+            intented_url.add(topic_url)
+print(len(intented_url))
+
+
+
+[3073751 3073636 3073646 3073751 3074061 3074171 3073681 3073681 3074266 3074106 3073751 3073636 3073706 3073636 3074171 3074156 3074146 3074171 3074146 3072791]
+[3074331, 3074126, 3074291, 3074276, 3074261, 3074226, 3073741, 3073746, 3073736, 3073731, 3073721, 3073711, 3073701]
+33
+
+"Europe's efforts to diversify suppliers will not be enough to get it through winter without Russian gas, the head of the International Energy Agency warned Monday, urging immediate efforts to cut demand. The comments by the IEA's director Fatih Birol came as European Commission President Ursula von der Leyen signed an energy deal in Baku, under which deliveries of Azerbaijani gas will double over the next few years. But Birol said in an article published by the IEA:Â  ""It is categorically not enough to just rely on gas from non-Russian sources -- these supplies are simply not available in the volumes required to substitute for missing deliveries from Russia. Europe has been seeking to import more LNG to replace some Russian gas, but it has a limited number of terminals to offload it
+
+
+ Europe has been seeking to import more LNG to replace some Russian gas, but it has a limited number of terminals to offload it ""This will be the case even if gas supplies from Norway and Azerbaijan flow at maximum capacity, if deliveries from North Africa stay close to last year's levels, if domestic gas production in Europe continues to follow recent trends, and if inflows of LNG increase at a similar record rate as they did in the first half of this year,"" he added. Europe is also waiting to see this week if Russia resumes gas shipments via Gazprom's key Nord Stream 1 pipeline, on which 10 days of scheduled maintenance will soon be completed. It has been seeking to import more liquefied natural gas (LNG) to replace some Russian gas, but it has a limited number of terminals to offload it from tankers and supplies are also limited. While the EU has not put Russian natural gas under sanctions over Moscow's invasion of Ukraine, it has sought to cut imports so as to reduce its dependence on Moscow. Russia has already cited various reasons for cutting energy supplies to the west. European nations now want to see it resumes gas shipments via the Nord Stream 1 pipeline on Thursday, when compressor maintenance is due end. ""Europe is now forced to operate in a constant state of uncertainty over Russian gas supplies, and we can't rule out a complete cut-off,"" said Birol."
